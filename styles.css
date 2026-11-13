@@ -1,0 +1,67 @@
+:root{
+  --mk-bg:#f3f6f8;
+  --mk-surface:#fff;
+  --mk-text:#12202b;
+  --mk-muted:#5d7080;
+  --mk-accent:#f2a900;
+  --mk-on-accent:#12202b;
+  --mk-fill:rgba(18,32,43,.07);
+  --line:#d3dde5;
+  --steel:#3d6c8a;
+  --pad:max(16px,env(safe-area-inset-left,0px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+h1,h2,.price__num{overflow-wrap:anywhere}
+body{margin:0;background:var(--mk-bg);color:var(--mk-text);font:400 17px/1.6 Onest,system-ui,"Segoe UI",sans-serif;padding-inline:var(--pad)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--steel);outline-offset:3px}
+
+.top{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:28px;padding-block:20px}
+.top nav{display:flex;gap:26px;margin-left:auto;font-weight:500}
+.top nav a{text-decoration:none}
+@media (max-width:640px){.top nav{display:none}.btn--sm{margin-left:auto}}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+
+.btn{display:inline-block;padding:15px 28px;border:0;border-radius:var(--mk-r-pill);background:var(--mk-accent);color:var(--mk-on-accent);font:600 17px/1 Onest,sans-serif;text-decoration:none;cursor:pointer}
+.btn--sm{padding:11px 20px;font-size:15px}
+
+main{max-width:1100px;margin:0 auto}
+.hero{padding-block:48px 24px}
+h1{font-weight:800;font-size:clamp(38px,7.4vw,92px);line-height:1;letter-spacing:-.035em;margin:0;max-width:14ch;text-wrap:balance}
+.lead{font-size:clamp(18px,2.2vw,22px);max-width:34em;color:var(--mk-muted);margin:28px 0 0}
+.hero__cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:32px}
+.hint{color:var(--mk-muted);font-size:15px}
+
+.film{position:relative;margin:44px calc(var(--pad)*-1) 0;height:clamp(140px,22vw,220px);cursor:crosshair;touch-action:pan-y}
+.film svg{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible}
+.film__tip{position:absolute;left:var(--pad);bottom:10px;font-size:14px;color:var(--mk-muted);pointer-events:none;background:rgba(243,246,248,.8);padding:2px 8px;border-radius:6px}
+
+.sec{padding-block:88px 8px}
+h2{font-weight:800;font-size:clamp(28px,4.4vw,48px);line-height:1.08;letter-spacing:-.025em;margin:0 0 32px;max-width:20ch;text-wrap:balance}
+
+.pills{max-width:100%;overflow-x:auto}
+.price{margin-top:32px;display:grid;grid-template-columns:auto 1fr;gap:12px 48px;align-items:end}
+.price__num{margin:0;font-weight:800;font-size:clamp(48px,9vw,104px);line-height:1;letter-spacing:-.04em}
+.price__num small{display:block;font-size:16px;font-weight:500;letter-spacing:0;color:var(--mk-muted);margin-top:8px}
+.price__txt{margin:0;max-width:30em;color:var(--mk-muted)}
+@media (max-width:700px){.price{grid-template-columns:1fr}}
+
+.calc__box{background:var(--mk-surface);border-radius:var(--mk-r-card);padding:clamp(20px,4vw,44px);display:grid;gap:22px}
+.calc__box label{font-weight:500}
+input[type=range]{width:100%;accent-color:var(--steel);height:32px}
+.calc__total{margin:0;font-weight:800;font-size:clamp(44px,8vw,84px);line-height:1;letter-spacing:-.04em}
+.calc__note{margin:6px 0 0;color:var(--mk-muted)}
+.lead-form{display:grid;grid-template-columns:1fr auto;gap:10px 14px;align-items:end;padding-top:22px;border-top:1px solid var(--line)}
+.lead-form label{grid-column:1/-1}
+.lead-form input{font:inherit;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;background:#fff;min-width:0}
+.ok{grid-column:1/-1;margin:0;color:var(--steel);font-weight:500}
+@media (max-width:560px){.lead-form{grid-template-columns:1fr}}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0}
+.steps li{padding:24px 24px 24px 0;border-top:3px solid var(--mk-text);display:grid;gap:8px;align-content:start}
+.steps li b{font-size:22px;font-weight:800}
+.steps li span{color:var(--mk-muted);font-size:16px}
+
+footer{max-width:1100px;margin:96px auto 0;padding-block:28px 40px;border-top:1px solid var(--line);color:var(--mk-muted);font-size:14px}
+footer p{margin:0;max-width:60em}

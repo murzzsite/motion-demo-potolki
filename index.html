@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Светолит: натяжные потолки (демо motion-kit)</title>
+<meta name="description" content="Демо-лендинг на motion-kit: пружинные эффекты, калькулятор потолка. Данные вымышлены.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="motion.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#top" aria-label="Светолит"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M2 8c7 5 15 5 22 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="13" cy="19" r="4" fill="var(--mk-accent)"/></svg>Светолит</a>
+  <nav>
+    <a href="#prices" data-roll>Цены</a>
+    <a href="#calc" data-roll>Расчёт</a>
+    <a href="#steps" data-roll>Как работаем</a>
+  </nav>
+  <a class="btn btn--sm" href="#calc" data-magnetic>Рассчитать</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1 data-scramble>Потолок, который не замечаешь. Только свет.</h1>
+    <p class="lead">Натяжные потолки в Москве и области. Замер бесплатно, монтаж за один день, гарантия на плёнку 15 лет.</p>
+    <div class="hero__cta">
+      <a class="btn" href="#calc" data-magnetic>Посчитать за минуту</a>
+      <span class="hint">Минимальный заказ 16 000 ₽</span>
+    </div>
+    <div class="film" id="film">
+      <svg viewBox="0 0 1000 220" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="lamp"><stop offset="0" stop-color="#ffd77a" stop-opacity=".95"/><stop offset="1" stop-color="#ffd77a" stop-opacity="0"/></radialGradient>
+          <linearGradient id="filmfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe8ef"/><stop offset="1" stop-color="#f4f7f9"/></linearGradient>
+        </defs>
+        <circle id="glow" cx="500" cy="110" r="150" fill="url(#lamp)"/>
+        <path id="sheet" fill="url(#filmfill)" stroke="#9db3c4" stroke-width="1.5" d=""/>
+      </svg>
+      <span class="film__tip">Проведите по плёнке: она тянется так же, как при монтаже</span>
+    </div>
+  </section>
+
+  <section class="sec" id="prices">
+    <h2 data-reveal>Три типа потолка, цена за квадратный метр</h2>
+    <div data-pill role="tablist" aria-label="Тип потолка" class="pills">
+      <button data-pill-item data-type="pvc" role="tab">Матовый и глянцевый</button>
+      <button data-pill-item data-type="fabric" role="tab">Тканевый</button>
+      <button data-pill-item data-type="float" role="tab">Парящий</button>
+    </div>
+    <div class="price" aria-live="polite">
+      <p class="price__num"><span id="ppm">1 150</span> ₽<small>/м², монтаж включён</small></p>
+      <p class="price__txt" id="ptxt"></p>
+    </div>
+  </section>
+
+  <section class="sec calc" id="calc">
+    <h2 data-reveal>Сколько стоит ваша комната</h2>
+    <div class="calc__box">
+      <label for="area">Площадь потолка: <b id="areaV">20</b> м²</label>
+      <input id="area" type="range" min="5" max="80" value="20">
+      <div class="calc__res">
+        <p class="calc__total"><span id="total">23 000</span> ₽</p>
+        <p class="calc__note" id="note">Угол в подарок при заказе от 16 000 ₽</p>
+      </div>
+      <form id="lead" class="lead-form" novalidate>
+        <label for="phone">Телефон</label>
+        <input id="phone" name="phone" type="tel" placeholder="+7 900 000-00-00" autocomplete="tel">
+        <button class="btn" type="submit" data-magnetic>Записаться на замер</button>
+        <p class="ok" id="ok" hidden>Заявка принята. Это демо-сайт: никуда не отправляется.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec" id="steps">
+    <h2 data-reveal>Четыре шага до готового потолка</h2>
+    <ol class="steps" data-stagger>
+      <li><b>Замер</b><span>Приезжаем в удобное время, считаем точно, фиксируем цену.</span></li>
+      <li><b>Договор</b><span>Цена из договора не растёт: ни углы, ни споты не добавляются сверху.</span></li>
+      <li><b>Монтаж</b><span>Комната до 20 м² за один день, без строительной пыли.</span></li>
+      <li><b>Приёмка</b><span>Включаем свет, проверяем швы, подписываем акт и гарантию.</span></li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <p>Светолит: вымышленная компания. Демо сайта на <a href="motion.js">motion-kit</a>. Телефон и адрес не настоящие.</p>
+</footer>
+
+<script src="motion.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
